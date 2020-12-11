@@ -1,18 +1,13 @@
 n = int(input("입력"))
 end_num = n * n
 cnt = 1
-row = 0
-R_row = n - 1
-R_col = 0
-col = n - 1
-start_num_col = 1
-start_num_R_col = 1
-start_num_row = 0
-start_num_R_row = 0
+R_row, row = n - 1, 0
+R_col, col= 0, n - 1
+start_num_col, start_num_R_col = 1, 1
+start_num_row, start_num_R_row = 0, 0
 arr = [[0] * n for y in range(n)]
 check = True
-revers_check1 = False
-revers_check2 = False
+revers_check1, revers_check2 = False, False
 while(cnt <= end_num) :
     if(check is True):
         if(revers_check1 is False):
@@ -60,3 +55,4 @@ for i in arr:
     for j in i:
         print(" ",j, end='')
     print()
+
